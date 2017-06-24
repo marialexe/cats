@@ -16,22 +16,34 @@ var createLiFavFood = function(food) {
   return li;
 }
 
-var appendElements = function(list, ul, li, li1) {
+var createLiImage = function(src) {
+  var li = document.createElement('li');
+  var img = document.createElement('img');
+  li.appendChild(img);
+  img.src = src;
+  img.width = 500;
+  img.height = 300;
+  return li;
+}
+
+var appendElements = function(list, ul, li, li1, li2) {
   ul.appendChild(li);
   ul.appendChild(li1);
+  ul.appendChild(li2);
   list.appendChild(ul);
 }
 
-var addNewCat = function(name, food) {
+var addNewCat = function(name, food, src) {
   var ul = createUlElement();
   var li = createLiName(name);
   var li1 = createLiFavFood(food);
+  var li2 = createLiImage(src);
   var section = document.getElementById("cats");
-  appendElements(section, ul, li, li1);
+  appendElements(section, ul, li, li1, li2);
 }
 
 var app = function() {
-  addNewCat("Roxy", "Milk");
+  addNewCat("Roxy", "Milk", "http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg");
 }
 
 window.onload = app;
