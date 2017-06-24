@@ -4,18 +4,26 @@ var createUlElement = function() {
   return ul;
 }
 
-var appendElements = function(list, ul) {
+var createLiName = function(name) {
+  var li = document.createElement('li');
+  li.innerText = "Name: " + name;
+  return li;
+}
+
+var appendElements = function(list, ul, li) {
+  ul.appendChild(li);
   list.appendChild(ul);
 }
 
-var addNewCat = function() {
+var addNewCat = function(name) {
   var ul = createUlElement();
+  var li = createLiName(name);
   var section = document.getElementById("cats");
-  appendElements(section, ul);
+  appendElements(section, ul, li);
 }
 
 var app = function() {
-  addNewCat();
+  addNewCat("Roxy");
 }
 
 window.onload = app;
