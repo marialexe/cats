@@ -44,6 +44,13 @@ var addNewCat = function(name, food, src) {
 
 var app = function() {
   addNewCat("Roxy", "Milk", "http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg");
+  addNewCat("Lady", "Sour cream", "https://images-na.ssl-images-amazon.com/images/G/01/img15/pet-products/small-tiles/30423_pets-products_january-site-flip_3-cathealth_short-tile_592x304._CB286975940_.jpg")
+
+  
+  
+
+
 }
+  
 
 window.onload = app;

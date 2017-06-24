@@ -6,3 +6,17 @@
 .red-quote{
   color: red;
 }
+
+body {
+  background-color: yellowgreen;
+}
+
+li {
+  display: inline;
+  margin:20px;
+}
+
+.cat {
+  color: blue;
+  font-size: 20px;
+}
